@@ -135,10 +135,21 @@ private extension ContentView {
     ) -> some View {
         let alignment: HorizontalAlignment = isLeading ? .leading : .trailing
         return VStack(alignment: alignment, spacing: 12) {
-            Label(title, systemImage: systemImage)
-                .font(.headline)
-                .frame(maxWidth: .infinity, alignment: isLeading ? .leading : .trailing)
-                .accessibilityHidden(true)
+            HStack(spacing: 8) {
+                if isLeading {
+                    Label(title, systemImage: systemImage)
+                    Spacer(minLength: 0)
+                    countBadge(count: collection.count)
+                } else {
+                    countBadge(count: collection.count)
+                    Spacer(minLength: 0)
+                    Label(title, systemImage: systemImage)
+                }
+            }
+            .font(.headline)
+            .frame(maxWidth: .infinity, alignment: isLeading ? .leading : .trailing)
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel("\(title), \(collection.count) card\(collection.count == 1 ? "" : "s")")
 
             Group {
                 if collection.isEmpty {
@@ -168,6 +179,19 @@ private extension ContentView {
         .accessibilityLabel(accessibilityLabel)
         .accessibilityHint("Cards that have been swiped to the \(isLeading ? "left" : "right") side appear here.")
         .animation(.spring(response: 0.35, dampingFraction: 0.9), value: collection)
+    }
+
+    @ViewBuilder
+    func countBadge(count: Int) -> some View {
+        Text("\(count)")
+            .font(.subheadline)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 4)
+            .background(
+                Capsule()
+                    .fill(Color.primary.opacity(0.1))
+            )
+            .accessibilityHidden(true)
     }
 
     func emptyCollectionView(isLeading: Bool) -> some View {
