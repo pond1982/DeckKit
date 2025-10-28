@@ -11,9 +11,10 @@ import SwiftUI
 struct ContentView: View {
 
     @Namespace private var cardNamespace
+    private let fullPool: [Hobby] = ContentView.loadSplitRailFullPool()
 
-    @State private var allHobbies = ContentView.loadSplitRailHobbies()
-    @State private var middleDeck = ContentView.loadSplitRailHobbies()
+    @State private var allHobbies: [Hobby] = []
+    @State private var middleDeck: [Hobby] = []
     @State private var leftCollection: [Hobby] = []
     @State private var rightCollection: [Hobby] = []
     @State private var selectedHobby: Hobby? = nil
@@ -29,6 +30,32 @@ struct ContentView: View {
         }
         return characters.enumerated().map { index, character in
             character.asHobby(number: index + 1)
+        }
+    }
+    
+    private static func loadSplitRailFullPool() -> [Hobby] {
+        let characters = SplitRailLoader.loadCharacters()
+        if characters.isEmpty {
+            return Hobby.demoCollection
+        }
+        return characters.enumerated().map { index, character in
+            character.asHobby(number: index + 1)
+        }
+    }
+
+    private func sampleTwenty(from pool: [Hobby]) -> [Hobby] {
+        if pool.count <= 20 { return pool }
+        return Array(pool.shuffled().prefix(20).enumerated().map { idx, hobby in
+            // Re-number 1...20 for display consistency
+            Hobby(number: idx + 1, name: hobby.name, color: hobby.color, text: hobby.text, imageName: hobby.imageName)
+        })
+    }
+
+    private func initializeDeckIfNeeded() {
+        if allHobbies.isEmpty {
+            let sample = sampleTwenty(from: fullPool)
+            allHobbies = sample
+            middleDeck = sample
         }
     }
 
@@ -65,37 +92,38 @@ struct ContentView: View {
                     .padding()
                 }
             }
-            .navigationTitle("DeckKit")
-            #if os(iOS)
-            .navigationBarTitleDisplayMode(.inline)
-            #endif
-            .toolbar {
-                ToolbarItem(placement: .bottomBar) {
-                    Button(action: shuffle) { Image.shuffle }
-                        .accessibilityLabel("Shuffle deck")
-                }
-                ToolbarItem(placement: .confirmationAction) {
-                    Button(action: toggleFavorites) { Image.favorite }
-                        .tint(.red)
-                        .symbolVariant(showOnlyFavorites ? .fill : .none)
-                        .accessibilityLabel(showOnlyFavorites ? "Show all cards" : "Show only favorites")
-                }
+        }
+        .onAppear { initializeDeckIfNeeded() }
+        .navigationTitle("DeckKit")
+        #if os(iOS)
+        .navigationBarTitleDisplayMode(.inline)
+        #endif
+        .toolbar {
+            ToolbarItem(placement: .bottomBar) {
+                Button(action: shuffle) { Image.shuffle }
+                    .accessibilityLabel("Shuffle deck")
             }
-            .sheet(item: $selectedHobby) { hobby in
-                ZStack {
-                    Color.background.ignoresSafeArea()
-                    HobbyCard(
-                        hobby: hobby,
-                        isFavorite: favoriteContext.isFavorite(hobby),
-                        isFlipped: false,
-                        favoriteAction: favoriteContext.toggleIsFavorite
-                    )
-                    .padding()
-                }
-                .presentationDetents([.medium, .large])
-                .presentationDragIndicator(.visible)
-                .accessibilityAddTraits(.isModal)
+            ToolbarItem(placement: .confirmationAction) {
+                Button(action: toggleFavorites) { Image.favorite }
+                    .tint(.red)
+                    .symbolVariant(showOnlyFavorites ? .fill : .none)
+                    .accessibilityLabel(showOnlyFavorites ? "Show all cards" : "Show only favorites")
             }
+        }
+        .sheet(item: $selectedHobby) { hobby in
+            ZStack {
+                Color.background.ignoresSafeArea()
+                HobbyCard(
+                    hobby: hobby,
+                    isFavorite: favoriteContext.isFavorite(hobby),
+                    isFlipped: false,
+                    favoriteAction: favoriteContext.toggleIsFavorite
+                )
+                .padding()
+            }
+            .presentationDetents([.medium, .large])
+            .presentationDragIndicator(.visible)
+            .accessibilityAddTraits(.isModal)
         }
     }
 }
@@ -290,10 +318,11 @@ private extension ContentView {
     }
 
     func shuffle() {
-        allHobbies.shuffle()
+        let sample = sampleTwenty(from: fullPool)
+        allHobbies = sample
         leftCollection.removeAll()
         rightCollection.removeAll()
-        middleDeck = allHobbies
+        middleDeck = sample
         shuffleAnimation.shuffle($middleDeck, times: 5)
     }
 
