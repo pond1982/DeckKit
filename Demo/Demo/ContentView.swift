@@ -33,8 +33,9 @@ struct ContentView: View {
     private let autoMoveDelay: TimeInterval = 0.12
     private let horizontalSwipeThreshold: CGFloat = 80
     private let cardExitDistance: CGFloat = 260
-    private let fanOffset: CGFloat = 24
-    private let fanRotation: Double = 8
+    private let fanOffset: CGFloat = 32
+    private let fanRotation: Double = 12
+    private let activePairScale: CGFloat = 0.86
 
     private static func loadSplitRailHobbies() -> [Hobby] {
         let characters = SplitRailLoader.loadCharacters()
@@ -214,6 +215,7 @@ private extension ContentView {
             favoriteAction: favoriteContext.toggleIsFavorite
         )
         .matchedGeometryEffect(id: hobby.id, in: cardNamespace)
+        .scaleEffect(activePairScale)
         .offset(
             x: baseOffset.width + currentOffset.width,
             y: baseOffset.height + currentOffset.height
