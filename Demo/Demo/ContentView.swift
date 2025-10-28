@@ -12,10 +12,10 @@ struct ContentView: View {
 
     @State var allHobbies = Hobby.demoCollection
     @State var hobbies = Hobby.demoCollection
-    @State var sheetHobby: Hobby?
 
     @StateObject var favoriteContext = FavoriteContext<Hobby>()
     @StateObject var shuffleAnimation = DeckShuffleAnimation(animation: .bouncy)
+    private let lingerDuration: TimeInterval = 4
 
     var body: some View {
         NavigationStack {
@@ -27,8 +27,16 @@ struct ContentView: View {
                     $hobbies,
                     shuffleAnimation: shuffleAnimation,
                     swipeAction: { edge, hobby in
-                        guard edge == .trailing else { return }
-                        openHobbyInSheet(hobby)
+                        // Linger on top longer before advancing the deck
+                        DispatchQueue.main.asyncAfter(deadline: .now() + lingerDuration) {
+                            switch edge {
+                            case .trailing, .leading:
+                                // Advance the deck after the delay without showing a popup
+                                hobbies.moveFirstItemToBack()
+                            default:
+                                break
+                            }
+                        }
                     }
                 ) { hobby in
                     HobbyCard(
@@ -38,20 +46,14 @@ struct ContentView: View {
                         favoriteAction: favoriteContext.toggleIsFavorite
                     )
                 }
+                .scaleEffect(0.85)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                 .padding()
             }
             .navigationTitle("DeckKit")
             #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
             #endif
-            .sheet(item: $sheetHobby) { hobby in
-                HobbyCard(
-                    hobby: hobby,
-                    isFavorite: favoriteContext.isFavorite(hobby),
-                    isFlipped: false,
-                    favoriteAction: favoriteContext.toggleIsFavorite
-                )
-            }
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
                     Button(action: shuffle) { Image.shuffle }
@@ -80,11 +82,6 @@ private extension ContentView {
         favoriteContext.isFavorite(hobby)
     }
 
-    func openHobbyInSheet(_ hobby: Hobby) {
-        sheetHobby = hobby
-        hobbies.moveLastItemToFront()
-    }
-
     func shuffle() {
         allHobbies.shuffle()
         shuffleAnimation.shuffle($hobbies, times: 5)
@@ -99,3 +96,4 @@ private extension ContentView {
 #Preview {
     ContentView()
 }
+
