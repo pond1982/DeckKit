@@ -16,6 +16,7 @@ struct ContentView: View {
     @State private var middleDeck = Hobby.demoCollection
     @State private var leftCollection: [Hobby] = []
     @State private var rightCollection: [Hobby] = []
+    @State private var selectedHobby: Hobby? = nil
 
     @StateObject private var favoriteContext = FavoriteContext<Hobby>()
     @StateObject private var shuffleAnimation = DeckShuffleAnimation(animation: .bouncy)
@@ -69,6 +70,21 @@ struct ContentView: View {
                         .symbolVariant(showOnlyFavorites ? .fill : .none)
                         .accessibilityLabel(showOnlyFavorites ? "Show all cards" : "Show only favorites")
                 }
+            }
+            .sheet(item: $selectedHobby) { hobby in
+                ZStack {
+                    Color.background.ignoresSafeArea()
+                    HobbyCard(
+                        hobby: hobby,
+                        isFavorite: favoriteContext.isFavorite(hobby),
+                        isFlipped: false,
+                        favoriteAction: favoriteContext.toggleIsFavorite
+                    )
+                    .padding()
+                }
+                .presentationDetents([.medium, .large])
+                .presentationDragIndicator(.visible)
+                .accessibilityAddTraits(.isModal)
             }
         }
     }
@@ -217,7 +233,9 @@ private extension ContentView {
         .matchedGeometryEffect(id: hobby.id, in: cardNamespace)
         .frame(width: 140)
         .shadow(color: Color.black.opacity(0.1), radius: 6, y: 4)
-        .allowsHitTesting(false)
+        .onTapGesture {
+            selectedHobby = hobby
+        }
         .accessibilityLabel("\(hobby.name)")
     }
 
