@@ -224,14 +224,20 @@ private extension ContentView {
     }
 
     func sortedThumbnail(for hobby: Hobby) -> some View {
-        HobbyCard(
-            hobby: hobby,
-            isFavorite: favoriteContext.isFavorite(hobby),
-            isFlipped: false,
-            favoriteAction: favoriteContext.toggleIsFavorite
-        )
+        ZStack {
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color.primary.opacity(0.06))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(Color.primary.opacity(0.1), lineWidth: 1)
+                )
+            Text(hobby.name)
+                .font(.headline)
+                .multilineTextAlignment(.center)
+                .padding()
+        }
         .matchedGeometryEffect(id: hobby.id, in: cardNamespace)
-        .frame(width: 140)
+        .frame(width: 140, height: 90)
         .shadow(color: Color.black.opacity(0.1), radius: 6, y: 4)
         .onTapGesture {
             selectedHobby = hobby
