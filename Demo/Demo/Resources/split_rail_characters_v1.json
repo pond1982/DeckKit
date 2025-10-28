@@ -1,0 +1,3739 @@
+{
+  "version": "1.0",
+  "generatedAt": "2025-10-26T02:35:33.306867Z",
+  "characters": [
+    {
+      "id": "C001",
+      "label": "chef-001",
+      "role": "chef",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.4,
+      "futureImpactSigma": 0.216,
+      "certaintyBase": 0.87,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C002",
+      "label": "programmer-002",
+      "role": "programmer",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.547,
+      "futureImpactSigma": 0.171,
+      "certaintyBase": 0.82,
+      "lensTags": [
+        "LAW",
+        "TRIAGE"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C003",
+      "label": "worker-003",
+      "role": "worker",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "intoxicated",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.592,
+      "futureImpactSigma": 0.104,
+      "certaintyBase": 0.7,
+      "lensTags": [
+        "CARE",
+        "DEON",
+        "UNCERT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C004",
+      "label": "artist-004",
+      "role": "artist",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "visually_impaired",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.404,
+      "futureImpactSigma": 0.155,
+      "certaintyBase": 0.77,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C005",
+      "label": "environmentalist-005",
+      "role": "environmentalist",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "pregnant",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.603,
+      "futureImpactSigma": 0.129,
+      "certaintyBase": 0.72,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C006",
+      "label": "nurse-006",
+      "role": "nurse",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.756,
+      "futureImpactSigma": 0.17,
+      "certaintyBase": 0.83,
+      "lensTags": [
+        "LAW",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C007",
+      "label": "worker-007",
+      "role": "worker",
+      "ageBand": "adult",
+      "groupSize": 3,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "trapped",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.579,
+      "futureImpactSigma": 0.147,
+      "certaintyBase": 0.85,
+      "lensTags": [
+        "TRIAGE",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C008",
+      "label": "parent-008",
+      "role": "parent",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "wheelchair",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.599,
+      "futureImpactSigma": 0.339,
+      "certaintyBase": 0.92,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C009",
+      "label": "pregnant_woman-009",
+      "role": "pregnant_woman",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "pregnant",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.717,
+      "futureImpactSigma": 0.209,
+      "certaintyBase": 0.84,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C010",
+      "label": "hacker-010",
+      "role": "hacker",
+      "ageBand": "teen",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "hearing_impaired",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.39,
+      "futureImpactSigma": 0.239,
+      "certaintyBase": 0.72,
+      "lensTags": [
+        "DEON",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C011",
+      "label": "soldier-011",
+      "role": "soldier",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "injured",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.567,
+      "futureImpactSigma": 0.112,
+      "certaintyBase": 0.87,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C012",
+      "label": "pregnant_doctor-012",
+      "role": "pregnant_doctor",
+      "ageBand": "teen",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "pregnant",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.791,
+      "futureImpactSigma": 0.229,
+      "certaintyBase": 0.9,
+      "lensTags": [
+        "CARE",
+        "LAW"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C013",
+      "label": "environmentalist-013",
+      "role": "environmentalist",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "trapped",
+      "dependents": 2,
+      "relationship": "stranger",
+      "futureImpactMu": 0.468,
+      "futureImpactSigma": 0.185,
+      "certaintyBase": 0.82,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C014",
+      "label": "artist-014",
+      "role": "artist",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.589,
+      "futureImpactSigma": 0.191,
+      "certaintyBase": 0.83,
+      "lensTags": [
+        "LAW",
+        "VIRT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C015",
+      "label": "politician-015",
+      "role": "politician",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "visually_impaired",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.481,
+      "futureImpactSigma": 0.268,
+      "certaintyBase": 0.75,
+      "lensTags": [
+        "UNCERT",
+        "UTIL"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C016",
+      "label": "nurse_in_training-016",
+      "role": "nurse_in_training",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.586,
+      "futureImpactSigma": 0.249,
+      "certaintyBase": 0.8,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C017",
+      "label": "student-017",
+      "role": "student",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "at_worksite",
+      "vulnerability": "none",
+      "dependents": 2,
+      "relationship": "stranger",
+      "futureImpactMu": 0.309,
+      "futureImpactSigma": 0.241,
+      "certaintyBase": 0.86,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C018",
+      "label": "engineer-018",
+      "role": "engineer",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "protester_permitted",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.705,
+      "futureImpactSigma": 0.245,
+      "certaintyBase": 0.85,
+      "lensTags": [
+        "DEON",
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C019",
+      "label": "unemployed-019",
+      "role": "unemployed",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.494,
+      "futureImpactSigma": 0.174,
+      "certaintyBase": 0.7,
+      "lensTags": [
+        "CARE",
+        "VIRT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C020",
+      "label": "parent-020",
+      "role": "parent",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 4,
+      "relationship": "stranger",
+      "futureImpactMu": 0.503,
+      "futureImpactSigma": 0.269,
+      "certaintyBase": 0.86,
+      "lensTags": [
+        "TRIAGE",
+        "UTIL"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C021",
+      "label": "pilot-021",
+      "role": "pilot",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.54,
+      "futureImpactSigma": 0.182,
+      "certaintyBase": 0.93,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C022",
+      "label": "bus_driver-022",
+      "role": "bus_driver",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.595,
+      "futureImpactSigma": 0.067,
+      "certaintyBase": 0.87,
+      "lensTags": [
+        "LAW",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C023",
+      "label": "worker-023",
+      "role": "worker",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.476,
+      "futureImpactSigma": 0.16,
+      "certaintyBase": 0.84,
+      "lensTags": [
+        "DEON",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C024",
+      "label": "scientist-024",
+      "role": "scientist",
+      "ageBand": "teen",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "visually_impaired",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.74,
+      "futureImpactSigma": 0.213,
+      "certaintyBase": 0.75,
+      "lensTags": [
+        "LAW",
+        "TRIAGE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C025",
+      "label": "elderly_caregiver-025",
+      "role": "elderly_caregiver",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "protester_permitted",
+      "vulnerability": "visually_impaired",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.431,
+      "futureImpactSigma": 0.199,
+      "certaintyBase": 0.85,
+      "lensTags": [
+        "CARE",
+        "UNCERT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C026",
+      "label": "nurse-026",
+      "role": "nurse",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "protester_unpermitted",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.873,
+      "futureImpactSigma": 0.224,
+      "certaintyBase": 0.73,
+      "lensTags": [
+        "CARE",
+        "TRIAGE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C027",
+      "label": "saboteur_suspect-027",
+      "role": "saboteur_suspect",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.198,
+      "futureImpactSigma": 0.142,
+      "certaintyBase": 0.82,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C028",
+      "label": "unemployed-028",
+      "role": "unemployed",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "coworker",
+      "futureImpactMu": 0.374,
+      "futureImpactSigma": 0.16,
+      "certaintyBase": 0.83,
+      "lensTags": [
+        "DEON",
+        "UTIL",
+        "VIRT"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C029",
+      "label": "teacher-029",
+      "role": "teacher",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "at_worksite",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "friend_from_prior_room",
+      "futureImpactMu": 0.516,
+      "futureImpactSigma": 0.204,
+      "certaintyBase": 0.82,
+      "lensTags": [
+        "LAW",
+        "UTIL",
+        "VIRT"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C030",
+      "label": "worker-030",
+      "role": "worker",
+      "ageBand": "adult",
+      "groupSize": 3,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.626,
+      "futureImpactSigma": 0.205,
+      "certaintyBase": 0.72,
+      "lensTags": [
+        "DEON",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C031",
+      "label": "student-031",
+      "role": "student",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "trespassing",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.472,
+      "futureImpactSigma": 0.203,
+      "certaintyBase": 0.79,
+      "lensTags": [
+        "DEON",
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C032",
+      "label": "politician-032",
+      "role": "politician",
+      "ageBand": "teen",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.519,
+      "futureImpactSigma": 0.161,
+      "certaintyBase": 0.83,
+      "lensTags": [
+        "CARE",
+        "UNCERT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C033",
+      "label": "student-033",
+      "role": "student",
+      "ageBand": "elder",
+      "groupSize": 3,
+      "legalStatus": "at_worksite",
+      "vulnerability": "none",
+      "dependents": 2,
+      "relationship": "coworker",
+      "futureImpactMu": 0.52,
+      "futureImpactSigma": 0.226,
+      "certaintyBase": 0.93,
+      "lensTags": [
+        "CARE",
+        "DEON"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C034",
+      "label": "parent-034",
+      "role": "parent",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "trespassing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.688,
+      "futureImpactSigma": 0.213,
+      "certaintyBase": 0.9,
+      "lensTags": [
+        "TRIAGE",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C035",
+      "label": "pregnant_doctor-035",
+      "role": "pregnant_doctor",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "pregnant",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.95,
+      "futureImpactSigma": 0.157,
+      "certaintyBase": 0.89,
+      "lensTags": [
+        "CARE",
+        "LAW"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C036",
+      "label": "pregnant_woman-036",
+      "role": "pregnant_woman",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "pregnant",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.741,
+      "futureImpactSigma": 0.215,
+      "certaintyBase": 0.81,
+      "lensTags": [
+        "CARE",
+        "TRIAGE"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C037",
+      "label": "pilot-037",
+      "role": "pilot",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "at_worksite",
+      "vulnerability": "injured",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.659,
+      "futureImpactSigma": 0.139,
+      "certaintyBase": 0.91,
+      "lensTags": [
+        "CARE",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C038",
+      "label": "blind_person-038",
+      "role": "blind_person",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "at_worksite",
+      "vulnerability": "visually_impaired",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.491,
+      "futureImpactSigma": 0.151,
+      "certaintyBase": 0.9,
+      "lensTags": [
+        "UTIL",
+        "VIRT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C039",
+      "label": "worker-039",
+      "role": "worker",
+      "ageBand": "adult",
+      "groupSize": 2,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "visually_impaired",
+      "dependents": 0,
+      "relationship": "friend_from_prior_room",
+      "futureImpactMu": 0.618,
+      "futureImpactSigma": 0.263,
+      "certaintyBase": 0.88,
+      "lensTags": [
+        "TRIAGE",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C040",
+      "label": "nurse_in_training-040",
+      "role": "nurse_in_training",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "injured",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.677,
+      "futureImpactSigma": 0.132,
+      "certaintyBase": 0.8,
+      "lensTags": [
+        "UNCERT",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C041",
+      "label": "worker-041",
+      "role": "worker",
+      "ageBand": "child",
+      "groupSize": 2,
+      "legalStatus": "jaywalking",
+      "vulnerability": "pregnant",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.46,
+      "futureImpactSigma": 0.217,
+      "certaintyBase": 0.77,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C042",
+      "label": "caregiver-042",
+      "role": "caregiver",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.711,
+      "futureImpactSigma": 0.187,
+      "certaintyBase": 0.98,
+      "lensTags": [
+        "CARE",
+        "VIRT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C043",
+      "label": "protester-043",
+      "role": "protester",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "protester_unpermitted",
+      "vulnerability": "visually_impaired",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.452,
+      "futureImpactSigma": 0.249,
+      "certaintyBase": 0.75,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C044",
+      "label": "engineer-044",
+      "role": "engineer",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.713,
+      "futureImpactSigma": 0.189,
+      "certaintyBase": 0.79,
+      "lensTags": [
+        "LAW",
+        "UTIL",
+        "VIRT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C045",
+      "label": "thief-045",
+      "role": "thief",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.234,
+      "futureImpactSigma": 0.237,
+      "certaintyBase": 0.82,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C046",
+      "label": "teacher-046",
+      "role": "teacher",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "coworker",
+      "futureImpactMu": 0.739,
+      "futureImpactSigma": 0.178,
+      "certaintyBase": 0.9,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C047",
+      "label": "paramedic-047",
+      "role": "paramedic",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.816,
+      "futureImpactSigma": 0.205,
+      "certaintyBase": 0.79,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C048",
+      "label": "pilot-048",
+      "role": "pilot",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.738,
+      "futureImpactSigma": 0.203,
+      "certaintyBase": 0.78,
+      "lensTags": [
+        "CARE",
+        "UNCERT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C049",
+      "label": "paramedic-049",
+      "role": "paramedic",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 3,
+      "relationship": "stranger",
+      "futureImpactMu": 0.711,
+      "futureImpactSigma": 0.153,
+      "certaintyBase": 0.88,
+      "lensTags": [
+        "LAW",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C050",
+      "label": "paramedic-050",
+      "role": "paramedic",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "wheelchair",
+      "dependents": 2,
+      "relationship": "stranger",
+      "futureImpactMu": 0.806,
+      "futureImpactSigma": 0.272,
+      "certaintyBase": 0.85,
+      "lensTags": [
+        "CARE",
+        "DEON",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C051",
+      "label": "parent-051",
+      "role": "parent",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "at_worksite",
+      "vulnerability": "none",
+      "dependents": 2,
+      "relationship": "stranger",
+      "futureImpactMu": 0.644,
+      "futureImpactSigma": 0.238,
+      "certaintyBase": 0.8,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C052",
+      "label": "worker-052",
+      "role": "worker",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "hearing_impaired",
+      "dependents": 1,
+      "relationship": "coworker",
+      "futureImpactMu": 0.568,
+      "futureImpactSigma": 0.316,
+      "certaintyBase": 0.74,
+      "lensTags": [
+        "UNCERT",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C053",
+      "label": "environmentalist-053",
+      "role": "environmentalist",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "coworker",
+      "futureImpactMu": 0.579,
+      "futureImpactSigma": 0.204,
+      "certaintyBase": 0.8,
+      "lensTags": [
+        "CARE",
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C054",
+      "label": "protester-054",
+      "role": "protester",
+      "ageBand": "adult",
+      "groupSize": 4,
+      "legalStatus": "protester_unpermitted",
+      "vulnerability": "injured",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.483,
+      "futureImpactSigma": 0.227,
+      "certaintyBase": 0.67,
+      "lensTags": [
+        "LAW",
+        "VIRT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C055",
+      "label": "firefighter-055",
+      "role": "firefighter",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "intoxicated",
+      "dependents": 0,
+      "relationship": "coworker",
+      "futureImpactMu": 0.665,
+      "futureImpactSigma": 0.167,
+      "certaintyBase": 0.83,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C056",
+      "label": "journalist-056",
+      "role": "journalist",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 2,
+      "relationship": "stranger",
+      "futureImpactMu": 0.662,
+      "futureImpactSigma": 0.252,
+      "certaintyBase": 0.81,
+      "lensTags": [
+        "CARE",
+        "DEON"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C057",
+      "label": "caregiver-057",
+      "role": "caregiver",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.63,
+      "futureImpactSigma": 0.194,
+      "certaintyBase": 0.78,
+      "lensTags": [
+        "LAW",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C058",
+      "label": "worker-058",
+      "role": "worker",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "protester_permitted",
+      "vulnerability": "visually_impaired",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.623,
+      "futureImpactSigma": 0.176,
+      "certaintyBase": 0.81,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C059",
+      "label": "worker-059",
+      "role": "worker",
+      "ageBand": "elder",
+      "groupSize": 2,
+      "legalStatus": "at_worksite",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.43,
+      "futureImpactSigma": 0.246,
+      "certaintyBase": 0.98,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C060",
+      "label": "blind_person-060",
+      "role": "blind_person",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "at_worksite",
+      "vulnerability": "visually_impaired",
+      "dependents": 1,
+      "relationship": "friend_from_prior_room",
+      "futureImpactMu": 0.552,
+      "futureImpactSigma": 0.263,
+      "certaintyBase": 0.81,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C061",
+      "label": "paramedic-061",
+      "role": "paramedic",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "visually_impaired",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.612,
+      "futureImpactSigma": 0.294,
+      "certaintyBase": 0.85,
+      "lensTags": [
+        "CARE",
+        "DEON"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C062",
+      "label": "artist-062",
+      "role": "artist",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "wheelchair",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.412,
+      "futureImpactSigma": 0.1,
+      "certaintyBase": 0.77,
+      "lensTags": [
+        "TRIAGE",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C063",
+      "label": "saboteur_suspect-063",
+      "role": "saboteur_suspect",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "pregnant",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.194,
+      "futureImpactSigma": 0.177,
+      "certaintyBase": 0.75,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C064",
+      "label": "journalist-064",
+      "role": "journalist",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 2,
+      "relationship": "friend_from_prior_room",
+      "futureImpactMu": 0.747,
+      "futureImpactSigma": 0.21,
+      "certaintyBase": 0.71,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C065",
+      "label": "firefighter-065",
+      "role": "firefighter",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "trespassing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "coworker",
+      "futureImpactMu": 0.812,
+      "futureImpactSigma": 0.206,
+      "certaintyBase": 0.74,
+      "lensTags": [
+        "CARE",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C066",
+      "label": "programmer-066",
+      "role": "programmer",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "wheelchair",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.591,
+      "futureImpactSigma": 0.234,
+      "certaintyBase": 0.85,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C067",
+      "label": "teacher-067",
+      "role": "teacher",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "at_worksite",
+      "vulnerability": "injured",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.714,
+      "futureImpactSigma": 0.169,
+      "certaintyBase": 0.84,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C068",
+      "label": "farmer-068",
+      "role": "farmer",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "coworker",
+      "futureImpactMu": 0.575,
+      "futureImpactSigma": 0.171,
+      "certaintyBase": 0.8,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C069",
+      "label": "elderly_caregiver-069",
+      "role": "elderly_caregiver",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "trapped",
+      "dependents": 0,
+      "relationship": "friend_from_prior_room",
+      "futureImpactMu": 0.668,
+      "futureImpactSigma": 0.273,
+      "certaintyBase": 0.82,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C070",
+      "label": "pregnant_woman-070",
+      "role": "pregnant_woman",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "at_worksite",
+      "vulnerability": "pregnant",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.709,
+      "futureImpactSigma": 0.228,
+      "certaintyBase": 0.81,
+      "lensTags": [
+        "LAW",
+        "UTIL"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C071",
+      "label": "parent-071",
+      "role": "parent",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 2,
+      "relationship": "stranger",
+      "futureImpactMu": 0.724,
+      "futureImpactSigma": 0.17,
+      "certaintyBase": 0.78,
+      "lensTags": [
+        "CARE",
+        "DEON"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C072",
+      "label": "parent-072",
+      "role": "parent",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "hearing_impaired",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.65,
+      "futureImpactSigma": 0.241,
+      "certaintyBase": 0.8,
+      "lensTags": [
+        "LAW",
+        "TRIAGE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C073",
+      "label": "worker-073",
+      "role": "worker",
+      "ageBand": "adult",
+      "groupSize": 4,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "injured",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.581,
+      "futureImpactSigma": 0.247,
+      "certaintyBase": 0.82,
+      "lensTags": [
+        "DEON",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C074",
+      "label": "parent-074",
+      "role": "parent",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.707,
+      "futureImpactSigma": 0.186,
+      "certaintyBase": 0.81,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C075",
+      "label": "farmer-075",
+      "role": "farmer",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "trapped",
+      "dependents": 3,
+      "relationship": "stranger",
+      "futureImpactMu": 0.51,
+      "futureImpactSigma": 0.178,
+      "certaintyBase": 0.87,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C076",
+      "label": "firefighter-076",
+      "role": "firefighter",
+      "ageBand": "teen",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "trapped",
+      "dependents": 3,
+      "relationship": "friend_from_prior_room",
+      "futureImpactMu": 0.642,
+      "futureImpactSigma": 0.165,
+      "certaintyBase": 0.7,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C077",
+      "label": "elderly_caregiver-077",
+      "role": "elderly_caregiver",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.605,
+      "futureImpactSigma": 0.24,
+      "certaintyBase": 0.89,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C078",
+      "label": "thief-078",
+      "role": "thief",
+      "ageBand": "teen",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "teammate_from_prior_room",
+      "futureImpactMu": 0.338,
+      "futureImpactSigma": 0.212,
+      "certaintyBase": 0.72,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C079",
+      "label": "firefighter-079",
+      "role": "firefighter",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "protester_permitted",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "coworker",
+      "futureImpactMu": 0.652,
+      "futureImpactSigma": 0.244,
+      "certaintyBase": 0.92,
+      "lensTags": [
+        "CARE",
+        "VIRT"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C080",
+      "label": "nurse-080",
+      "role": "nurse",
+      "ageBand": "teen",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 3,
+      "relationship": "family_member_rare",
+      "futureImpactMu": 0.651,
+      "futureImpactSigma": 0.098,
+      "certaintyBase": 0.84,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C081",
+      "label": "delivery-081",
+      "role": "delivery",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "trespassing",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "teammate_from_prior_room",
+      "futureImpactMu": 0.545,
+      "futureImpactSigma": 0.2,
+      "certaintyBase": 0.81,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C082",
+      "label": "student-082",
+      "role": "student",
+      "ageBand": "adult",
+      "groupSize": 3,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.548,
+      "futureImpactSigma": 0.216,
+      "certaintyBase": 0.7,
+      "lensTags": [
+        "DEON",
+        "LAW",
+        "TRIAGE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C083",
+      "label": "firefighter-083",
+      "role": "firefighter",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 3,
+      "relationship": "stranger",
+      "futureImpactMu": 0.659,
+      "futureImpactSigma": 0.18,
+      "certaintyBase": 0.86,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C084",
+      "label": "thief-084",
+      "role": "thief",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "wheelchair",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.301,
+      "futureImpactSigma": 0.224,
+      "certaintyBase": 0.75,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C085",
+      "label": "police-085",
+      "role": "police",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.498,
+      "futureImpactSigma": 0.293,
+      "certaintyBase": 0.92,
+      "lensTags": [
+        "DEON",
+        "UTIL"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C086",
+      "label": "delivery-086",
+      "role": "delivery",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "protester_permitted",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.567,
+      "futureImpactSigma": 0.194,
+      "certaintyBase": 0.91,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C087",
+      "label": "politician-087",
+      "role": "politician",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.542,
+      "futureImpactSigma": 0.132,
+      "certaintyBase": 0.91,
+      "lensTags": [
+        "CARE",
+        "DEON"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C088",
+      "label": "environmentalist-088",
+      "role": "environmentalist",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "wheelchair",
+      "dependents": 0,
+      "relationship": "family_member_rare",
+      "futureImpactMu": 0.419,
+      "futureImpactSigma": 0.217,
+      "certaintyBase": 0.86,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C089",
+      "label": "unemployed-089",
+      "role": "unemployed",
+      "ageBand": "teen",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.407,
+      "futureImpactSigma": 0.249,
+      "certaintyBase": 0.79,
+      "lensTags": [
+        "LAW",
+        "UNCERT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C090",
+      "label": "teacher-090",
+      "role": "teacher",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "injured",
+      "dependents": 1,
+      "relationship": "coworker",
+      "futureImpactMu": 0.774,
+      "futureImpactSigma": 0.196,
+      "certaintyBase": 0.83,
+      "lensTags": [
+        "CARE",
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C091",
+      "label": "volunteer-091",
+      "role": "volunteer",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 2,
+      "relationship": "stranger",
+      "futureImpactMu": 0.534,
+      "futureImpactSigma": 0.268,
+      "certaintyBase": 0.74,
+      "lensTags": [
+        "CARE",
+        "UNCERT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C092",
+      "label": "politician-092",
+      "role": "politician",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.529,
+      "futureImpactSigma": 0.2,
+      "certaintyBase": 0.75,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C093",
+      "label": "entrepreneur-093",
+      "role": "entrepreneur",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 3,
+      "relationship": "stranger",
+      "futureImpactMu": 0.587,
+      "futureImpactSigma": 0.193,
+      "certaintyBase": 0.86,
+      "lensTags": [
+        "CARE",
+        "TRIAGE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C094",
+      "label": "doctor-094",
+      "role": "doctor",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "at_worksite",
+      "vulnerability": "trapped",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.876,
+      "futureImpactSigma": 0.253,
+      "certaintyBase": 0.89,
+      "lensTags": [
+        "UNCERT",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C095",
+      "label": "nurse_in_training-095",
+      "role": "nurse_in_training",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "visually_impaired",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.647,
+      "futureImpactSigma": 0.163,
+      "certaintyBase": 0.94,
+      "lensTags": [
+        "LAW",
+        "TRIAGE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C096",
+      "label": "elderly_caregiver-096",
+      "role": "elderly_caregiver",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 2,
+      "relationship": "stranger",
+      "futureImpactMu": 0.533,
+      "futureImpactSigma": 0.251,
+      "certaintyBase": 0.86,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C097",
+      "label": "tourist-097",
+      "role": "tourist",
+      "ageBand": "adult",
+      "groupSize": 2,
+      "legalStatus": "at_worksite",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.532,
+      "futureImpactSigma": 0.268,
+      "certaintyBase": 0.79,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C098",
+      "label": "student-098",
+      "role": "student",
+      "ageBand": "adult",
+      "groupSize": 2,
+      "legalStatus": "protester_unpermitted",
+      "vulnerability": "visually_impaired",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.584,
+      "futureImpactSigma": 0.113,
+      "certaintyBase": 0.84,
+      "lensTags": [
+        "CARE",
+        "VIRT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C099",
+      "label": "worker-099",
+      "role": "worker",
+      "ageBand": "elder",
+      "groupSize": 2,
+      "legalStatus": "at_worksite",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.503,
+      "futureImpactSigma": 0.091,
+      "certaintyBase": 0.82,
+      "lensTags": [
+        "CARE",
+        "TRIAGE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C100",
+      "label": "nurse_in_training-100",
+      "role": "nurse_in_training",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "protester_unpermitted",
+      "vulnerability": "pregnant",
+      "dependents": 3,
+      "relationship": "stranger",
+      "futureImpactMu": 0.697,
+      "futureImpactSigma": 0.199,
+      "certaintyBase": 0.8,
+      "lensTags": [
+        "UTIL",
+        "VIRT"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C101",
+      "label": "artist-101",
+      "role": "artist",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "at_worksite",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "teammate_from_prior_room",
+      "futureImpactMu": 0.451,
+      "futureImpactSigma": 0.198,
+      "certaintyBase": 0.73,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C102",
+      "label": "paramedic-102",
+      "role": "paramedic",
+      "ageBand": "teen",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "mental_distress",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.698,
+      "futureImpactSigma": 0.218,
+      "certaintyBase": 0.64,
+      "lensTags": [
+        "LAW",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C103",
+      "label": "pregnant_doctor-103",
+      "role": "pregnant_doctor",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "pregnant",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.802,
+      "futureImpactSigma": 0.185,
+      "certaintyBase": 0.97,
+      "lensTags": [
+        "CARE",
+        "UTIL"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C104",
+      "label": "caregiver-104",
+      "role": "caregiver",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.654,
+      "futureImpactSigma": 0.173,
+      "certaintyBase": 0.8,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C105",
+      "label": "teacher-105",
+      "role": "teacher",
+      "ageBand": "teen",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.558,
+      "futureImpactSigma": 0.19,
+      "certaintyBase": 0.85,
+      "lensTags": [
+        "CARE",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C106",
+      "label": "parent-106",
+      "role": "parent",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.546,
+      "futureImpactSigma": 0.226,
+      "certaintyBase": 0.82,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C107",
+      "label": "caregiver-107",
+      "role": "caregiver",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.564,
+      "futureImpactSigma": 0.189,
+      "certaintyBase": 0.89,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C108",
+      "label": "executive-108",
+      "role": "executive",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "friend_from_prior_room",
+      "futureImpactMu": 0.658,
+      "futureImpactSigma": 0.173,
+      "certaintyBase": 0.68,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C109",
+      "label": "executive-109",
+      "role": "executive",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "protester_unpermitted",
+      "vulnerability": "visually_impaired",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.589,
+      "futureImpactSigma": 0.09,
+      "certaintyBase": 0.8,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C110",
+      "label": "saboteur_suspect-110",
+      "role": "saboteur_suspect",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "injured",
+      "dependents": 2,
+      "relationship": "stranger",
+      "futureImpactMu": 0.151,
+      "futureImpactSigma": 0.194,
+      "certaintyBase": 0.79,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C111",
+      "label": "environmentalist-111",
+      "role": "environmentalist",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "trespassing",
+      "vulnerability": "visually_impaired",
+      "dependents": 1,
+      "relationship": "teammate_from_prior_room",
+      "futureImpactMu": 0.472,
+      "futureImpactSigma": 0.129,
+      "certaintyBase": 0.81,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C112",
+      "label": "chef-112",
+      "role": "chef",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "trapped",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.516,
+      "futureImpactSigma": 0.211,
+      "certaintyBase": 0.75,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C113",
+      "label": "chef-113",
+      "role": "chef",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 2,
+      "relationship": "stranger",
+      "futureImpactMu": 0.574,
+      "futureImpactSigma": 0.157,
+      "certaintyBase": 0.94,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C114",
+      "label": "worker-114",
+      "role": "worker",
+      "ageBand": "teen",
+      "groupSize": 3,
+      "legalStatus": "at_worksite",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "teammate_from_prior_room",
+      "futureImpactMu": 0.549,
+      "futureImpactSigma": 0.156,
+      "certaintyBase": 0.77,
+      "lensTags": [
+        "UNCERT",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C115",
+      "label": "environmentalist-115",
+      "role": "environmentalist",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "at_worksite",
+      "vulnerability": "pregnant",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.53,
+      "futureImpactSigma": 0.228,
+      "certaintyBase": 0.81,
+      "lensTags": [
+        "DEON",
+        "UTIL"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C116",
+      "label": "hacker-116",
+      "role": "hacker",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "protester_unpermitted",
+      "vulnerability": "pregnant",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.358,
+      "futureImpactSigma": 0.159,
+      "certaintyBase": 0.72,
+      "lensTags": [
+        "CARE",
+        "VIRT"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C117",
+      "label": "paramedic-117",
+      "role": "paramedic",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "pregnant",
+      "dependents": 1,
+      "relationship": "friend_from_prior_room",
+      "futureImpactMu": 0.655,
+      "futureImpactSigma": 0.234,
+      "certaintyBase": 0.77,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C118",
+      "label": "journalist-118",
+      "role": "journalist",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "injured",
+      "dependents": 2,
+      "relationship": "stranger",
+      "futureImpactMu": 0.531,
+      "futureImpactSigma": 0.225,
+      "certaintyBase": 0.79,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C119",
+      "label": "student-119",
+      "role": "student",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 2,
+      "relationship": "stranger",
+      "futureImpactMu": 0.597,
+      "futureImpactSigma": 0.162,
+      "certaintyBase": 0.82,
+      "lensTags": [
+        "LAW",
+        "UTIL",
+        "VIRT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C120",
+      "label": "worker-120",
+      "role": "worker",
+      "ageBand": "elder",
+      "groupSize": 4,
+      "legalStatus": "jaywalking",
+      "vulnerability": "injured",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.443,
+      "futureImpactSigma": 0.177,
+      "certaintyBase": 0.73,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C121",
+      "label": "journalist-121",
+      "role": "journalist",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "trapped",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.479,
+      "futureImpactSigma": 0.213,
+      "certaintyBase": 0.97,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C122",
+      "label": "teacher-122",
+      "role": "teacher",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "mental_distress",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.619,
+      "futureImpactSigma": 0.157,
+      "certaintyBase": 0.68,
+      "lensTags": [
+        "CARE",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C123",
+      "label": "wheelchair_user-123",
+      "role": "wheelchair_user",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "wheelchair",
+      "dependents": 0,
+      "relationship": "friend_from_prior_room",
+      "futureImpactMu": 0.37,
+      "futureImpactSigma": 0.238,
+      "certaintyBase": 0.92,
+      "lensTags": [
+        "DEON",
+        "UTIL"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C124",
+      "label": "disabled_person-124",
+      "role": "disabled_person",
+      "ageBand": "teen",
+      "groupSize": 1,
+      "legalStatus": "at_worksite",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.489,
+      "futureImpactSigma": 0.111,
+      "certaintyBase": 0.79,
+      "lensTags": [
+        "DEON",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C125",
+      "label": "delivery-125",
+      "role": "delivery",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "protester_unpermitted",
+      "vulnerability": "mental_distress",
+      "dependents": 3,
+      "relationship": "stranger",
+      "futureImpactMu": 0.568,
+      "futureImpactSigma": 0.204,
+      "certaintyBase": 0.73,
+      "lensTags": [
+        "UNCERT",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C126",
+      "label": "athlete-126",
+      "role": "athlete",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.639,
+      "futureImpactSigma": 0.17,
+      "certaintyBase": 0.79,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C127",
+      "label": "unemployed-127",
+      "role": "unemployed",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "trespassing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.44,
+      "futureImpactSigma": 0.179,
+      "certaintyBase": 0.87,
+      "lensTags": [
+        "LAW",
+        "UNCERT",
+        "VIRT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C128",
+      "label": "pilot-128",
+      "role": "pilot",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "injured",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.754,
+      "futureImpactSigma": 0.186,
+      "certaintyBase": 0.91,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C129",
+      "label": "engineer-129",
+      "role": "engineer",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "hearing_impaired",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.686,
+      "futureImpactSigma": 0.088,
+      "certaintyBase": 0.91,
+      "lensTags": [
+        "CARE",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C130",
+      "label": "programmer-130",
+      "role": "programmer",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "injured",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.578,
+      "futureImpactSigma": 0.188,
+      "certaintyBase": 0.9,
+      "lensTags": [
+        "LAW",
+        "TRIAGE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C131",
+      "label": "engineer-131",
+      "role": "engineer",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "at_worksite",
+      "vulnerability": "none",
+      "dependents": 2,
+      "relationship": "coworker",
+      "futureImpactMu": 0.646,
+      "futureImpactSigma": 0.257,
+      "certaintyBase": 0.87,
+      "lensTags": [
+        "CARE",
+        "DEON"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C132",
+      "label": "elderly_caregiver-132",
+      "role": "elderly_caregiver",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.599,
+      "futureImpactSigma": 0.209,
+      "certaintyBase": 0.76,
+      "lensTags": [
+        "CARE",
+        "DEON"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C133",
+      "label": "executive-133",
+      "role": "executive",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.441,
+      "futureImpactSigma": 0.159,
+      "certaintyBase": 0.94,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C134",
+      "label": "programmer-134",
+      "role": "programmer",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.64,
+      "futureImpactSigma": 0.264,
+      "certaintyBase": 0.82,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C135",
+      "label": "nurse_in_training-135",
+      "role": "nurse_in_training",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.542,
+      "futureImpactSigma": 0.154,
+      "certaintyBase": 0.9,
+      "lensTags": [
+        "LAW",
+        "TRIAGE"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C136",
+      "label": "elderly_caregiver-136",
+      "role": "elderly_caregiver",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.688,
+      "futureImpactSigma": 0.161,
+      "certaintyBase": 0.68,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C137",
+      "label": "environmentalist-137",
+      "role": "environmentalist",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "injured",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.609,
+      "futureImpactSigma": 0.242,
+      "certaintyBase": 0.7,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C138",
+      "label": "firefighter-138",
+      "role": "firefighter",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.664,
+      "futureImpactSigma": 0.209,
+      "certaintyBase": 0.98,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C139",
+      "label": "scientist-139",
+      "role": "scientist",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "intoxicated",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.889,
+      "futureImpactSigma": 0.23,
+      "certaintyBase": 0.81,
+      "lensTags": [
+        "CARE",
+        "DEON"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C140",
+      "label": "hacker-140",
+      "role": "hacker",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.472,
+      "futureImpactSigma": 0.294,
+      "certaintyBase": 0.83,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C141",
+      "label": "parent-141",
+      "role": "parent",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.611,
+      "futureImpactSigma": 0.194,
+      "certaintyBase": 0.75,
+      "lensTags": [
+        "LAW",
+        "TRIAGE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C142",
+      "label": "criminal-142",
+      "role": "criminal",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.305,
+      "futureImpactSigma": 0.192,
+      "certaintyBase": 0.72,
+      "lensTags": [
+        "DEON",
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C143",
+      "label": "police-143",
+      "role": "police",
+      "ageBand": "teen",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.534,
+      "futureImpactSigma": 0.117,
+      "certaintyBase": 0.9,
+      "lensTags": [
+        "DEON",
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C144",
+      "label": "thief-144",
+      "role": "thief",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "pregnant",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.304,
+      "futureImpactSigma": 0.264,
+      "certaintyBase": 0.7,
+      "lensTags": [
+        "LAW",
+        "UTIL"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C145",
+      "label": "teacher-145",
+      "role": "teacher",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.644,
+      "futureImpactSigma": 0.193,
+      "certaintyBase": 0.85,
+      "lensTags": [
+        "CARE",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C146",
+      "label": "firefighter-146",
+      "role": "firefighter",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "trapped",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.597,
+      "futureImpactSigma": 0.254,
+      "certaintyBase": 0.59,
+      "lensTags": [
+        "CARE",
+        "VIRT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C147",
+      "label": "worker-147",
+      "role": "worker",
+      "ageBand": "child",
+      "groupSize": 3,
+      "legalStatus": "at_worksite",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.413,
+      "futureImpactSigma": 0.226,
+      "certaintyBase": 0.8,
+      "lensTags": [
+        "UTIL",
+        "VIRT"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C148",
+      "label": "police-148",
+      "role": "police",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "wheelchair",
+      "dependents": 2,
+      "relationship": "stranger",
+      "futureImpactMu": 0.642,
+      "futureImpactSigma": 0.201,
+      "certaintyBase": 0.85,
+      "lensTags": [
+        "DEON",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C149",
+      "label": "firefighter-149",
+      "role": "firefighter",
+      "ageBand": "teen",
+      "groupSize": 1,
+      "legalStatus": "trespassing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "friend_from_prior_room",
+      "futureImpactMu": 0.696,
+      "futureImpactSigma": 0.208,
+      "certaintyBase": 0.98,
+      "lensTags": [
+        "LAW",
+        "UNCERT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C150",
+      "label": "programmer-150",
+      "role": "programmer",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "at_worksite",
+      "vulnerability": "injured",
+      "dependents": 0,
+      "relationship": "friend_from_prior_room",
+      "futureImpactMu": 0.565,
+      "futureImpactSigma": 0.187,
+      "certaintyBase": 0.94,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C151",
+      "label": "scientist-151",
+      "role": "scientist",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.702,
+      "futureImpactSigma": 0.096,
+      "certaintyBase": 0.83,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C152",
+      "label": "farmer-152",
+      "role": "farmer",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "at_worksite",
+      "vulnerability": "none",
+      "dependents": 2,
+      "relationship": "coworker",
+      "futureImpactMu": 0.461,
+      "futureImpactSigma": 0.242,
+      "certaintyBase": 0.77,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C153",
+      "label": "executive-153",
+      "role": "executive",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "at_worksite",
+      "vulnerability": "hearing_impaired",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.644,
+      "futureImpactSigma": 0.161,
+      "certaintyBase": 0.84,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C154",
+      "label": "executive-154",
+      "role": "executive",
+      "ageBand": "teen",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "teammate_from_prior_room",
+      "futureImpactMu": 0.559,
+      "futureImpactSigma": 0.236,
+      "certaintyBase": 0.78,
+      "lensTags": [
+        "CARE",
+        "TRIAGE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C155",
+      "label": "firefighter-155",
+      "role": "firefighter",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.785,
+      "futureImpactSigma": 0.193,
+      "certaintyBase": 0.88,
+      "lensTags": [
+        "CARE",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C156",
+      "label": "pregnant_woman-156",
+      "role": "pregnant_woman",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "pregnant",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.627,
+      "futureImpactSigma": 0.188,
+      "certaintyBase": 0.83,
+      "lensTags": [
+        "CARE",
+        "TRIAGE"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C157",
+      "label": "parent-157",
+      "role": "parent",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "protester_unpermitted",
+      "vulnerability": "injured",
+      "dependents": 3,
+      "relationship": "stranger",
+      "futureImpactMu": 0.507,
+      "futureImpactSigma": 0.231,
+      "certaintyBase": 0.79,
+      "lensTags": [
+        "CARE",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C158",
+      "label": "student-158",
+      "role": "student",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "injured",
+      "dependents": 0,
+      "relationship": "teammate_from_prior_room",
+      "futureImpactMu": 0.535,
+      "futureImpactSigma": 0.117,
+      "certaintyBase": 0.86,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C159",
+      "label": "artist-159",
+      "role": "artist",
+      "ageBand": "teen",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "wheelchair",
+      "dependents": 2,
+      "relationship": "family_member_rare",
+      "futureImpactMu": 0.451,
+      "futureImpactSigma": 0.13,
+      "certaintyBase": 0.66,
+      "lensTags": [
+        "LAW",
+        "TRIAGE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C160",
+      "label": "athlete-160",
+      "role": "athlete",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "friend_from_prior_room",
+      "futureImpactMu": 0.59,
+      "futureImpactSigma": 0.096,
+      "certaintyBase": 0.95,
+      "lensTags": [
+        "CARE",
+        "DEON"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C161",
+      "label": "elderly_caregiver-161",
+      "role": "elderly_caregiver",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "trespassing",
+      "vulnerability": "visually_impaired",
+      "dependents": 0,
+      "relationship": "teammate_from_prior_room",
+      "futureImpactMu": 0.545,
+      "futureImpactSigma": 0.198,
+      "certaintyBase": 0.83,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C162",
+      "label": "journalist-162",
+      "role": "journalist",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.697,
+      "futureImpactSigma": 0.215,
+      "certaintyBase": 0.75,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C163",
+      "label": "nurse-163",
+      "role": "nurse",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "mental_distress",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.759,
+      "futureImpactSigma": 0.191,
+      "certaintyBase": 0.7,
+      "lensTags": [
+        "DEON",
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C164",
+      "label": "student-164",
+      "role": "student",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "friend_from_prior_room",
+      "futureImpactMu": 0.567,
+      "futureImpactSigma": 0.119,
+      "certaintyBase": 0.78,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C165",
+      "label": "politician-165",
+      "role": "politician",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.527,
+      "futureImpactSigma": 0.226,
+      "certaintyBase": 0.95,
+      "lensTags": [
+        "CARE",
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C166",
+      "label": "monk-166",
+      "role": "monk",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "at_worksite",
+      "vulnerability": "visually_impaired",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.463,
+      "futureImpactSigma": 0.192,
+      "certaintyBase": 0.9,
+      "lensTags": [
+        "LAW",
+        "UTIL",
+        "VIRT"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C167",
+      "label": "teacher-167",
+      "role": "teacher",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "at_worksite",
+      "vulnerability": "hearing_impaired",
+      "dependents": 0,
+      "relationship": "teammate_from_prior_room",
+      "futureImpactMu": 0.564,
+      "futureImpactSigma": 0.201,
+      "certaintyBase": 0.88,
+      "lensTags": [
+        "CARE",
+        "VIRT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C168",
+      "label": "worker-168",
+      "role": "worker",
+      "ageBand": "child",
+      "groupSize": 3,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "wheelchair",
+      "dependents": 0,
+      "relationship": "coworker",
+      "futureImpactMu": 0.428,
+      "futureImpactSigma": 0.128,
+      "certaintyBase": 0.88,
+      "lensTags": [
+        "CARE",
+        "DEON",
+        "LAW"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C169",
+      "label": "nurse_in_training-169",
+      "role": "nurse_in_training",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "at_worksite",
+      "vulnerability": "intoxicated",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.584,
+      "futureImpactSigma": 0.132,
+      "certaintyBase": 0.74,
+      "lensTags": [
+        "DEON",
+        "LAW",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C170",
+      "label": "elderly_caregiver-170",
+      "role": "elderly_caregiver",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.673,
+      "futureImpactSigma": 0.225,
+      "certaintyBase": 0.76,
+      "lensTags": [
+        "CARE",
+        "LAW",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C171",
+      "label": "chef-171",
+      "role": "chef",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "visually_impaired",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.541,
+      "futureImpactSigma": 0.206,
+      "certaintyBase": 0.98,
+      "lensTags": [
+        "LAW",
+        "VIRT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C172",
+      "label": "hacker-172",
+      "role": "hacker",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.445,
+      "futureImpactSigma": 0.182,
+      "certaintyBase": 0.86,
+      "lensTags": [
+        "CARE",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C173",
+      "label": "nurse-173",
+      "role": "nurse",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "mental_distress",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.748,
+      "futureImpactSigma": 0.289,
+      "certaintyBase": 0.66,
+      "lensTags": [
+        "CARE",
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C174",
+      "label": "protester-174",
+      "role": "protester",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "protester_permitted",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.591,
+      "futureImpactSigma": 0.225,
+      "certaintyBase": 0.88,
+      "lensTags": [
+        "LAW",
+        "VIRT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C175",
+      "label": "artist-175",
+      "role": "artist",
+      "ageBand": "child",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "pregnant",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.344,
+      "futureImpactSigma": 0.257,
+      "certaintyBase": 0.67,
+      "lensTags": [
+        "LAW",
+        "TRIAGE"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C176",
+      "label": "firefighter-176",
+      "role": "firefighter",
+      "ageBand": "teen",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "wheelchair",
+      "dependents": 2,
+      "relationship": "stranger",
+      "futureImpactMu": 0.691,
+      "futureImpactSigma": 0.228,
+      "certaintyBase": 0.81,
+      "lensTags": [
+        "DEON",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C177",
+      "label": "student-177",
+      "role": "student",
+      "ageBand": "adult",
+      "groupSize": 3,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 2,
+      "relationship": "stranger",
+      "futureImpactMu": 0.474,
+      "futureImpactSigma": 0.197,
+      "certaintyBase": 0.9,
+      "lensTags": [
+        "CARE",
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C178",
+      "label": "nurse-178",
+      "role": "nurse",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "pregnant",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.757,
+      "futureImpactSigma": 0.146,
+      "certaintyBase": 0.91,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C179",
+      "label": "worker-179",
+      "role": "worker",
+      "ageBand": "elder",
+      "groupSize": 4,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 3,
+      "relationship": "stranger",
+      "futureImpactMu": 0.494,
+      "futureImpactSigma": 0.201,
+      "certaintyBase": 0.81,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C180",
+      "label": "teacher-180",
+      "role": "teacher",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "at_worksite",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.674,
+      "futureImpactSigma": 0.13,
+      "certaintyBase": 0.88,
+      "lensTags": [
+        "CARE",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C181",
+      "label": "delivery-181",
+      "role": "delivery",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.571,
+      "futureImpactSigma": 0.176,
+      "certaintyBase": 0.83,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C182",
+      "label": "chef-182",
+      "role": "chef",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "injured",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.525,
+      "futureImpactSigma": 0.221,
+      "certaintyBase": 0.73,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C183",
+      "label": "volunteer-183",
+      "role": "volunteer",
+      "ageBand": "teen",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "pregnant",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.601,
+      "futureImpactSigma": 0.214,
+      "certaintyBase": 0.67,
+      "lensTags": [
+        "TRIAGE",
+        "UTIL"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C184",
+      "label": "worker-184",
+      "role": "worker",
+      "ageBand": "adult",
+      "groupSize": 4,
+      "legalStatus": "jaywalking",
+      "vulnerability": "wheelchair",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.609,
+      "futureImpactSigma": 0.204,
+      "certaintyBase": 0.81,
+      "lensTags": [
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C185",
+      "label": "worker-185",
+      "role": "worker",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 3,
+      "relationship": "stranger",
+      "futureImpactMu": 0.554,
+      "futureImpactSigma": 0.27,
+      "certaintyBase": 0.98,
+      "lensTags": [
+        "LAW",
+        "UNCERT",
+        "VIRT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C186",
+      "label": "parent-186",
+      "role": "parent",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "protester_unpermitted",
+      "vulnerability": "none",
+      "dependents": 3,
+      "relationship": "teammate_from_prior_room",
+      "futureImpactMu": 0.642,
+      "futureImpactSigma": 0.279,
+      "certaintyBase": 0.72,
+      "lensTags": [
+        "CARE",
+        "DEON"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C187",
+      "label": "farmer-187",
+      "role": "farmer",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.495,
+      "futureImpactSigma": 0.16,
+      "certaintyBase": 0.79,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C188",
+      "label": "soldier-188",
+      "role": "soldier",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.497,
+      "futureImpactSigma": 0.198,
+      "certaintyBase": 0.86,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C189",
+      "label": "politician-189",
+      "role": "politician",
+      "ageBand": "teen",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.441,
+      "futureImpactSigma": 0.234,
+      "certaintyBase": 0.84,
+      "lensTags": [
+        "UTIL",
+        "VIRT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C190",
+      "label": "blind_person-190",
+      "role": "blind_person",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "visually_impaired",
+      "dependents": 2,
+      "relationship": "stranger",
+      "futureImpactMu": 0.459,
+      "futureImpactSigma": 0.144,
+      "certaintyBase": 0.77,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C191",
+      "label": "pregnant_woman-191",
+      "role": "pregnant_woman",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "pregnant",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.586,
+      "futureImpactSigma": 0.225,
+      "certaintyBase": 0.87,
+      "lensTags": [
+        "CARE",
+        "VIRT"
+      ],
+      "optOutSensitive": true
+    },
+    {
+      "id": "C192",
+      "label": "tourist-192",
+      "role": "tourist",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "intoxicated",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.623,
+      "futureImpactSigma": 0.174,
+      "certaintyBase": 0.66,
+      "lensTags": [
+        "LAW",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C193",
+      "label": "judge-193",
+      "role": "judge",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "wheelchair",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.628,
+      "futureImpactSigma": 0.259,
+      "certaintyBase": 0.94,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C194",
+      "label": "parent-194",
+      "role": "parent",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.631,
+      "futureImpactSigma": 0.172,
+      "certaintyBase": 0.79,
+      "lensTags": [
+        "LAW",
+        "TRIAGE",
+        "VIRT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C195",
+      "label": "scientist-195",
+      "role": "scientist",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "injured",
+      "dependents": 0,
+      "relationship": "coworker",
+      "futureImpactMu": 0.918,
+      "futureImpactSigma": 0.247,
+      "certaintyBase": 0.7,
+      "lensTags": [
+        "LAW",
+        "UNCERT",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C196",
+      "label": "volunteer-196",
+      "role": "volunteer",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.628,
+      "futureImpactSigma": 0.227,
+      "certaintyBase": 0.92,
+      "lensTags": [
+        "LAW"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C197",
+      "label": "journalist-197",
+      "role": "journalist",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "protester_permitted",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "coworker",
+      "futureImpactMu": 0.543,
+      "futureImpactSigma": 0.137,
+      "certaintyBase": 0.9,
+      "lensTags": [
+        "LAW",
+        "UTIL"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C198",
+      "label": "scientist-198",
+      "role": "scientist",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 1,
+      "relationship": "stranger",
+      "futureImpactMu": 0.752,
+      "futureImpactSigma": 0.235,
+      "certaintyBase": 0.69,
+      "lensTags": [
+        "LAW",
+        "UNCERT"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C199",
+      "label": "worker-199",
+      "role": "worker",
+      "ageBand": "adult",
+      "groupSize": 1,
+      "legalStatus": "jaywalking",
+      "vulnerability": "none",
+      "dependents": 0,
+      "relationship": "stranger",
+      "futureImpactMu": 0.579,
+      "futureImpactSigma": 0.259,
+      "certaintyBase": 0.9,
+      "lensTags": [
+        "CARE",
+        "DEON"
+      ],
+      "optOutSensitive": false
+    },
+    {
+      "id": "C200",
+      "label": "volunteer-200",
+      "role": "volunteer",
+      "ageBand": "elder",
+      "groupSize": 1,
+      "legalStatus": "lawful_crossing",
+      "vulnerability": "mental_distress",
+      "dependents": 1,
+      "relationship": "teammate_from_prior_room",
+      "futureImpactMu": 0.5,
+      "futureImpactSigma": 0.234,
+      "certaintyBase": 0.91,
+      "lensTags": [
+        "CARE"
+      ],
+      "optOutSensitive": false
+    }
+  ]
+}
