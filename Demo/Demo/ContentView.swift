@@ -33,9 +33,8 @@ struct ContentView: View {
     private let autoMoveDelay: TimeInterval = 0.12
     private let horizontalSwipeThreshold: CGFloat = 80
     private let cardExitDistance: CGFloat = 260
-    private let fanOffset: CGFloat = 32
-    private let fanRotation: Double = 12
-    private let activePairScale: CGFloat = 0.86
+    private let pairHorizontalSpacing: CGFloat = 220
+    private let activePairScale: CGFloat = 0.72
 
     private static func loadSplitRailHobbies() -> [Hobby] {
         let characters = SplitRailLoader.loadCharacters()
@@ -160,6 +159,7 @@ private extension ContentView {
             }
             .scaleEffect(0.9)
             .padding()
+            .opacity(0)
             .allowsHitTesting(false)
             .accessibilityHidden(true)
 
@@ -240,23 +240,16 @@ private extension ContentView {
     private func offset(for role: ActiveCardRole) -> CGSize {
         switch role {
         case .left:
-            return CGSize(width: -fanOffset, height: 0)
+            return CGSize(width: -pairHorizontalSpacing / 2, height: 0)
         case .right:
-            return CGSize(width: fanOffset, height: 0)
+            return CGSize(width: pairHorizontalSpacing / 2, height: 0)
         case .single:
             return .zero
         }
     }
 
     private func rotation(for role: ActiveCardRole) -> Double {
-        switch role {
-        case .left:
-            return -fanRotation
-        case .right:
-            return fanRotation
-        case .single:
-            return 0
-        }
+        return 0
     }
 
     func dragRotation(for hobby: Hobby) -> Double {
