@@ -7,6 +7,9 @@
 
 import DeckKit
 import SwiftUI
+#if canImport(UIKit)
+import UIKit
+#endif
 
 struct ContentView: View {
 
@@ -15,13 +18,23 @@ struct ContentView: View {
 
     @State private var allHobbies: [Hobby] = []
     @State private var middleDeck: [Hobby] = []
+    @State private var activePair: [Hobby] = []
     @State private var leftCollection: [Hobby] = []
     @State private var rightCollection: [Hobby] = []
     @State private var selectedHobby: Hobby? = nil
+    @State private var dragOffsets: [String: CGSize] = [:]
+    @State private var activeDragCardId: String? = nil
+    @State private var interactionLocked = false
+    @State private var pendingResolutionEdges: [Edge] = []
 
     @StateObject private var favoriteContext = FavoriteContext<Hobby>()
     @StateObject private var shuffleAnimation = DeckShuffleAnimation(animation: .bouncy)
     private let lingerDuration: TimeInterval = 0.2
+    private let autoMoveDelay: TimeInterval = 0.12
+    private let horizontalSwipeThreshold: CGFloat = 80
+    private let cardExitDistance: CGFloat = 260
+    private let fanOffset: CGFloat = 24
+    private let fanRotation: Double = 8
 
     private static func loadSplitRailHobbies() -> [Hobby] {
         let characters = SplitRailLoader.loadCharacters()
@@ -52,11 +65,10 @@ struct ContentView: View {
     }
 
     private func initializeDeckIfNeeded() {
-        if allHobbies.isEmpty {
-            let sample = sampleTwenty(from: fullPool)
-            allHobbies = sample
-            middleDeck = sample
-        }
+        guard allHobbies.isEmpty else { return }
+        let sample = sampleTwenty(from: fullPool)
+        allHobbies = sample
+        configureDeck(with: sample, resetCollections: true)
     }
 
     var body: some View {
@@ -135,7 +147,6 @@ private extension ContentView {
             DeckView(
                 $middleDeck,
                 shuffleAnimation: shuffleAnimation,
-                swipeAction: handleSwipe(edge:item:)
             ) { hobby in
                 HobbyCard(
                     hobby: hobby,
@@ -144,20 +155,141 @@ private extension ContentView {
                     favoriteAction: favoriteContext.toggleIsFavorite
                 )
                 .matchedGeometryEffect(id: hobby.id, in: cardNamespace)
+                .opacity(activePair.contains(where: { $0.id == hobby.id }) ? 0 : 1)
             }
             .scaleEffect(0.9)
             .padding()
-            .allowsHitTesting(!middleDeck.isEmpty)
-            .accessibilityElement(children: .contain)
-            .accessibilityLabel("Active deck")
-            .accessibilityHint("Swipe left to send a card to the left collection or right to send it to the right collection.")
+            .allowsHitTesting(false)
+            .accessibilityHidden(true)
 
-            if middleDeck.isEmpty {
+            if deckIsExhausted {
                 allDoneView
+            } else {
+                activePairLayer
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .accessibilityElement(children: .contain)
+        .accessibilityLabel("Active deck")
+        .accessibilityHint(deckAccessibilityHint)
         .animation(.spring(response: 0.35, dampingFraction: 0.85), value: middleDeck)
+        .animation(.spring(response: 0.35, dampingFraction: 0.85), value: activePair)
+    }
+
+    var deckIsExhausted: Bool {
+        activePair.isEmpty && middleDeck.isEmpty
+    }
+
+    var hasSingleActiveCard: Bool {
+        activePair.count == 1
+    }
+
+    var deckAccessibilityHint: String {
+        hasSingleActiveCard
+            ? "Swipe left to send the card to the left collection or right to send it to the right collection."
+            : "Swipe either card left or right. The other card will move to the opposite side automatically."
+    }
+
+    var activePairLayer: some View {
+        ZStack {
+            ForEach(activePair) { hobby in
+                activeCardView(for: hobby)
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+    }
+
+    private func activeCardView(for hobby: Hobby) -> some View {
+        let role = activeRole(for: hobby)
+        let baseOffset = offset(for: role)
+        let currentOffset = dragOffsets[hobby.id] ?? .zero
+        let rotation = rotation(for: role) + dragRotation(for: hobby)
+        let isInteractable = !interactionLocked && (activeDragCardId == nil || activeDragCardId == hobby.id)
+        let zIndex = activeDragCardId == hobby.id ? 3 : role.zIndex
+
+        return HobbyCard(
+            hobby: hobby,
+            isFavorite: favoriteContext.isFavorite(hobby),
+            isFlipped: shuffleAnimation.isShuffling,
+            favoriteAction: favoriteContext.toggleIsFavorite
+        )
+        .matchedGeometryEffect(id: hobby.id, in: cardNamespace)
+        .offset(
+            x: baseOffset.width + currentOffset.width,
+            y: baseOffset.height + currentOffset.height
+        )
+        .rotationEffect(.degrees(rotation))
+        .shadow(color: Color.black.opacity(0.15), radius: 12, y: 8)
+        .zIndex(zIndex)
+        .gesture(dragGesture(for: hobby))
+        .allowsHitTesting(isInteractable)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel(role.accessibilityLabel)
+        .accessibilityHint(hasSingleActiveCard
+            ? "Swipe left to send this card left or right to send it right."
+            : "Swipe to send this card \(role.accessibilityDirectionDescription). The other card will move to the opposite side.")
+    }
+
+    private func activeRole(for hobby: Hobby) -> ActiveCardRole {
+        guard activePair.count > 1 else { return .single }
+        return activePair.first?.id == hobby.id ? .left : .right
+    }
+
+    private func offset(for role: ActiveCardRole) -> CGSize {
+        switch role {
+        case .left:
+            return CGSize(width: -fanOffset, height: 0)
+        case .right:
+            return CGSize(width: fanOffset, height: 0)
+        case .single:
+            return .zero
+        }
+    }
+
+    private func rotation(for role: ActiveCardRole) -> Double {
+        switch role {
+        case .left:
+            return -fanRotation
+        case .right:
+            return fanRotation
+        case .single:
+            return 0
+        }
+    }
+
+    func dragRotation(for hobby: Hobby) -> Double {
+        guard let offset = dragOffsets[hobby.id] else { return 0 }
+        let rotation = Double(offset.width / 20)
+        return min(max(rotation, -12), 12)
+    }
+
+    private enum ActiveCardRole {
+        case left
+        case right
+        case single
+
+        var zIndex: Double {
+            switch self {
+            case .left: return 1
+            case .right: return 2
+            case .single: return 2
+            }
+        }
+
+        var accessibilityLabel: String {
+            switch self {
+            case .left: return "Active left card"
+            case .right: return "Active right card"
+            case .single: return "Active card"
+            }
+        }
+
+        var accessibilityDirectionDescription: String {
+            switch self {
+            case .left, .right: return "left or right"
+            case .single: return "left or right"
+            }
+        }
     }
 
     var allDoneView: some View {
@@ -295,16 +427,95 @@ private extension ContentView {
         favoriteContext.isFavorite(hobby)
     }
 
-    func handleSwipe(edge: Edge, item hobby: Hobby) {
-        guard edge == .leading || edge == .trailing else { return }
-        DispatchQueue.main.asyncAfter(deadline: .now() + lingerDuration) {
-            moveFromDeck(hobby, to: edge)
+    func dragGesture(for hobby: Hobby) -> some Gesture {
+        DragGesture()
+            .onChanged { value in
+                guard !interactionLocked else { return }
+                if activeDragCardId == nil || activeDragCardId == hobby.id {
+                    activeDragCardId = hobby.id
+                    dragOffsets[hobby.id] = value.translation
+                }
+            }
+            .onEnded { value in
+                activeDragCardId = nil
+                guard !interactionLocked else {
+                    resetDrag(for: hobby)
+                    return
+                }
+                dragEnded(for: hobby, value: value)
+            }
+    }
+
+    func dragEnded(for hobby: Hobby, value: DragGesture.Value) {
+        dragOffsets[hobby.id] = value.translation
+        guard abs(value.translation.width) > horizontalSwipeThreshold else {
+            resetDrag(for: hobby)
+            return
+        }
+        let edge: Edge = value.translation.width > 0 ? .trailing : .leading
+        resolvePair(swiped: hobby, edge: edge)
+    }
+
+    func resetDrag(for hobby: Hobby) {
+        withAnimation(.spring(response: 0.3, dampingFraction: 0.9)) {
+            dragOffsets[hobby.id] = .zero
         }
     }
 
-    func moveFromDeck(_ hobby: Hobby, to edge: Edge) {
-        guard let index = middleDeck.firstIndex(where: { $0.id == hobby.id }) else { return }
-        let card = middleDeck.remove(at: index)
+    func resolvePair(swiped hobby: Hobby, edge: Edge) {
+        guard edge == .leading || edge == .trailing else {
+            resetDrag(for: hobby)
+            return
+        }
+        guard activePair.contains(where: { $0.id == hobby.id }) else { return }
+
+        interactionLocked = true
+
+        let direction: CGFloat = edge == .leading ? -1 : 1
+        let currentOffset = dragOffsets[hobby.id] ?? .zero
+        withAnimation(.spring(response: 0.4, dampingFraction: 0.85)) {
+            dragOffsets[hobby.id] = CGSize(
+                width: currentOffset.width + direction * cardExitDistance,
+                height: currentOffset.height
+            )
+        }
+
+        if let otherCard = pairedCard(for: hobby) {
+            scheduleAutoMove(for: otherCard, to: edge.opposite)
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + lingerDuration) {
+            moveActiveCard(hobby, to: edge)
+        }
+    }
+
+    func scheduleAutoMove(for hobby: Hobby, to edge: Edge) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + autoMoveDelay) {
+            let direction: CGFloat = edge == .leading ? -1 : 1
+            let currentOffset = dragOffsets[hobby.id] ?? .zero
+            withAnimation(.spring(response: 0.4, dampingFraction: 0.85)) {
+                dragOffsets[hobby.id] = CGSize(
+                    width: currentOffset.width + direction * cardExitDistance,
+                    height: currentOffset.height
+                )
+            }
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + lingerDuration) {
+                moveActiveCard(hobby, to: edge)
+            }
+        }
+    }
+
+    func pairedCard(for hobby: Hobby) -> Hobby? {
+        activePair.first { $0.id != hobby.id }
+    }
+
+    func moveActiveCard(_ hobby: Hobby, to edge: Edge) {
+        guard let index = activePair.firstIndex(where: { $0.id == hobby.id }) else { return }
+        let card = activePair.remove(at: index)
+        dragOffsets.removeValue(forKey: card.id)
+        pendingResolutionEdges.append(edge)
+
         withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
             switch edge {
             case .leading:
@@ -315,24 +526,101 @@ private extension ContentView {
                 break
             }
         }
+
+        if activePair.isEmpty {
+            announceResolution(for: pendingResolutionEdges)
+            pendingResolutionEdges.removeAll()
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                prepareActivePair()
+            }
+        }
+    }
+
+    func announceResolution(for edges: [Edge]) {
+        guard !edges.isEmpty else { return }
+#if canImport(UIKit)
+        let uniqueEdges = Set(edges)
+        let message: String
+        if uniqueEdges.count >= 2 {
+            message = "Sent one card to left and one to right."
+        } else if let edge = edges.first {
+            switch edge {
+            case .leading: message = "Sent card to the left."
+            case .trailing: message = "Sent card to the right."
+            default: message = "Sent card."
+            }
+        } else {
+            message = "Sent cards."
+        }
+        UIAccessibility.post(notification: .announcement, argument: message)
+#endif
+    }
+
+    func prepareActivePair() {
+        guard activePair.isEmpty else { return }
+        guard !middleDeck.isEmpty else {
+            interactionLocked = false
+            return
+        }
+        let count = min(2, middleDeck.count)
+        let newPair = Array(middleDeck.prefix(count))
+        middleDeck.removeFirst(count)
+
+        withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
+            activePair = newPair
+        }
+
+        dragOffsets = newPair.reduce(into: [:]) { result, hobby in
+            result[hobby.id] = .zero
+        }
+        interactionLocked = false
+    }
+
+    func configureDeck(with items: [Hobby], resetCollections: Bool, preparePair: Bool = true) {
+        middleDeck = items
+        activePair.removeAll()
+        dragOffsets.removeAll()
+        pendingResolutionEdges.removeAll()
+        interactionLocked = false
+        activeDragCardId = nil
+
+        if resetCollections {
+            leftCollection.removeAll()
+            rightCollection.removeAll()
+        }
+
+        guard preparePair else { return }
+        DispatchQueue.main.async {
+            prepareActivePair()
+        }
     }
 
     func shuffle() {
         let sample = sampleTwenty(from: fullPool)
         allHobbies = sample
-        leftCollection.removeAll()
-        rightCollection.removeAll()
-        middleDeck = sample
+        configureDeck(with: sample, resetCollections: true, preparePair: false)
         shuffleAnimation.shuffle($middleDeck, times: 5)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+            prepareActivePair()
+        }
     }
 
     func toggleFavorites() {
         favoriteContext.showOnlyFavorites.toggle()
         let updatedDeck = showOnlyFavorites ? favoriteHobbies : allHobbies
-        withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
-            middleDeck = updatedDeck
-            leftCollection.removeAll()
-            rightCollection.removeAll()
+        configureDeck(with: updatedDeck, resetCollections: true)
+    }
+}
+
+private extension Edge {
+
+    var opposite: Edge {
+        switch self {
+        case .top: return .bottom
+        case .bottom: return .top
+        case .leading: return .trailing
+        case .trailing: return .leading
         }
     }
 }
