@@ -12,8 +12,8 @@ struct ContentView: View {
 
     @Namespace private var cardNamespace
 
-    @State private var allHobbies = Hobby.demoCollection
-    @State private var middleDeck = Hobby.demoCollection
+    @State private var allHobbies = ContentView.loadSplitRailHobbies()
+    @State private var middleDeck = ContentView.loadSplitRailHobbies()
     @State private var leftCollection: [Hobby] = []
     @State private var rightCollection: [Hobby] = []
     @State private var selectedHobby: Hobby? = nil
@@ -21,6 +21,16 @@ struct ContentView: View {
     @StateObject private var favoriteContext = FavoriteContext<Hobby>()
     @StateObject private var shuffleAnimation = DeckShuffleAnimation(animation: .bouncy)
     private let lingerDuration: TimeInterval = 0.2
+
+    private static func loadSplitRailHobbies() -> [Hobby] {
+        let characters = SplitRailLoader.loadCharacters()
+        if characters.isEmpty {
+            return Hobby.demoCollection
+        }
+        return characters.enumerated().map { index, character in
+            character.asHobby(number: index + 1)
+        }
+    }
 
     var body: some View {
         NavigationStack {

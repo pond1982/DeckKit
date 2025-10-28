@@ -88,7 +88,7 @@ private extension HobbyCardContent {
     }
 
     var footnote: some View {
-        Text("Swipe left for a new hobby, swipe right to select this one.")
+        Text("Swipe left or right to sort this card.")
             .font(.footnote)
             .fixedSize(horizontal: false, vertical: true)
     }
@@ -115,3 +115,4 @@ private extension HobbyCardContent {
     .padding()
     .background(Color.primary.opacity(0.1))
 }
+
