@@ -10,7 +10,7 @@ import DeckKit
 import Foundation
 import SwiftUI
 
-struct Hobby: Identifiable {
+struct Hobby: Identifiable, Equatable {
     
     var number: Int
     var name: String
@@ -24,6 +24,10 @@ struct Hobby: Identifiable {
 extension Hobby {
 
     var id: String { name }
+    
+    static func == (lhs: Hobby, rhs: Hobby) -> Bool {
+        lhs.id == rhs.id
+    }
 
     static var demoCollection: [Hobby] = [
         Hobby(number: 01, name: "Drawing", color: .green, text: "Perfect for when you have a lot of paper.", imageName: "pencil"),
@@ -56,3 +60,4 @@ extension Hobby {
         return list.randomElement() ?? list[0]
     }
 }
+
