@@ -34,7 +34,7 @@ struct ContentView: View {
     private let horizontalSwipeThreshold: CGFloat = 80
     private let cardExitDistance: CGFloat = 260
     private let pairHorizontalSpacing: CGFloat = 220
-    private let activePairScale: CGFloat = 0.72
+    private let activePairScale: CGFloat = 0.5
 
     private static func loadSplitRailHobbies() -> [Hobby] {
         let characters = SplitRailLoader.loadCharacters()
@@ -82,18 +82,18 @@ struct ContentView: View {
                     VStack(spacing: 20) {
                         HStack(spacing: 16) {
                             sortedCollectionView(
-                                title: "Left Collection",
+                                title: "Live",
                                 systemImage: "arrowshape.turn.up.left",
                                 collection: leftCollection,
                                 isLeading: true,
-                                accessibilityLabel: "Left collection area"
+                                accessibilityLabel: "Live collection area"
                             )
                             sortedCollectionView(
-                                title: "Right Collection",
+                                title: "Die",
                                 systemImage: "arrowshape.turn.up.right",
                                 collection: rightCollection,
                                 isLeading: false,
-                                accessibilityLabel: "Right collection area"
+                                accessibilityLabel: "Die collection area"
                             )
                         }
                         .frame(height: sideHeight)

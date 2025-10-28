@@ -53,7 +53,7 @@ extension SplitRailCharacter {
     // - Text: legalStatus, vulnerability, relationship
     func asHobby(number: Int) -> Hobby {
         let title = "\(role.capitalized) • \(ageBand.capitalized)"
-        let body = "Status: \(legalStatus.replacingOccurrences(of: "_", with: " "))\nVulnerability: \(vulnerability.replacingOccurrences(of: "_", with: " "))\nRelationship: \(relationship.replacingOccurrences(of: "_", with: " "))"
+        let body = "\(legalStatus.replacingOccurrences(of: "_", with: " "))\n\(vulnerability.replacingOccurrences(of: "_", with: " "))\n\(relationship.replacingOccurrences(of: "_", with: " "))"
         // Pick a deterministic color and symbol based on id hash
         let colors: [Color] = [.green, .blue, .yellow, .red, .orange, .brown, .purple, .pink, .teal, .indigo]
         let symbols: [String] = [

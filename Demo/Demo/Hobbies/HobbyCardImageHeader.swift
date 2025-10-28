@@ -15,7 +15,7 @@ struct HobbyCardImageHeader: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 10)
             .fill(hobby.color.gradient)
-            .frame(height: 150)
+            .frame(height: 200)
             .overlay(imageView)
     }
 }
@@ -34,3 +34,4 @@ private extension HobbyCardImageHeader {
     HobbyCardImageHeader(hobby: .preview)
         .padding()
 }
+

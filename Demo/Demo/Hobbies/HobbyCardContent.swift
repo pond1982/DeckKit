@@ -27,12 +27,8 @@ struct HobbyCardContent: View {
                 .padding(circleSize/2)
             cardContent
                 .padding(circleSize)
-            HStack {
-                cardNumber
-                Spacer()
-                favoriteButton
-            }
-            .font(.title2)
+            cardNumber
+                .font(.title2)
         }
         .padding()
         .background(Color.primary.colorInvert())
@@ -58,19 +54,6 @@ private extension HobbyCardContent {
     var cardNumber: some View {
         edgeBadge {
             Text("\(hobby.number)").bold()
-        }
-    }
-
-    var favoriteButton: some View {
-        edgeBadge {
-            Button {
-                favoriteAction(hobby)
-            } label: {
-                Image.favorite
-                    .symbolVariant(isFavorite ? .fill : .none)
-                    .symbolEffect(.wiggle, value: isFavorite)
-            }
-            .tint(.red)
         }
     }
 
